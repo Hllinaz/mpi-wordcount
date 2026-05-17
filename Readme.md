@@ -1,45 +1,44 @@
-# MPI & Dask Examples
+1. Title and Team Information
 
-Use augustosalazar/slim-mpi or augustosalazar/slim-mpi:2 (for macOS and windows) or augustosalazar/un_mpi_image:v5
+2. Problem Description
 
-To run and delete the container after execution:
-```bash
-docker run --rm -v "%cd%\target:/app" augustosalazar/slim-mpi:2 mpiexec --allow-run-as-root -n 3 python /app/code0.py
+3. Environment and Execution Instructions
 
-docker run --rm -v "$(pwd)"/target:/app augustosalazar/slim-mpi:2 mpiexec --allow-run-as-root -n 3 python /app/code0.py
-```
+4. Experimental plan
+    a. Sequential Baseline (what it does and how)
 
+    b. MPI version 1 (what it does and how)
 
-## Prime example
+    c. The test procedure
 
-### Serial version
-Busqueda de los primos con 5 dígitos
-```bash
-docker run --rm -v "$(pwd)"/target:/app augustosalazar/slim-mpi:2 mpiexec python /app/primeChecker.py 5
-```
+5. Experimental plan execution
+    a. Sequential baseline timing
 
-### MPI version
-Busqueda de los primos con 5 dígitos usando MPI con 4 workers (con un batch size de 10)
-```bash
-docker run --rm -v "$(pwd)"/target:/app augustosalazar/slim-mpi:2 mpiexec --allow-run-as-root -n 4 python /app/primeCheckerMPI.py 5
-```
+    b. MPI version 1 timing results
 
-###  Dask version
-Busqueda de los primos con 5 dígitos usando Dask con 4 workers (con un batch size de 10)
-```bash
-docker run --rm -v "$(pwd)"/target:/app --network host daskdev/dask:latest python /app/primeCheckerDask.py 5 4
-```
+    c. Load imbalance evidence
 
-To install nano on Play with Docker:
-apk --update add nano
+    d. Implementation of MPI Version 2 correcting the imbalance with its timing results
+    (total execution time, speedup, efficiency, load balance)
 
+6. Analysis
 
-## Shared Memory
-```bash
-docker run --rm -v "%cd%\target:/app" augustosalazar/slim-mpi:2 mpiexec --allow-run-as-root -n 3 python /app/shared01.py
-Proceso 2 de 3 iniciado.
-Proceso 0 de 3 iniciado.
-Proceso 1 de 3 iniciado.
-Contenido del array compartido:
-[ 0 10 20]
-```
+    a. Did the first MPI implementation improve execution time compared to the
+    sequential baseline?
+
+    b. Was the observed speedup linear?
+
+    c. Is there evidence of load imbalance? How was it observed?
+
+    d. Did the second implementation reduce load imbalance?
+
+    e. Did the improved distribution strategy produce a real performance
+    improvement?
+    
+    f. What limitations affected your experiment?
+
+7.  Conclusions
+State whether the parallel implementations improved execution time compared to
+the sequential baseline, the most important problem observed in the first parallel
+version, if the second version helped and how ending with a judgment based on
+evidence
