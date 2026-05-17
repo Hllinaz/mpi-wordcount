@@ -1,0 +1,37 @@
+Proceso 1: 375 archivos asignados
+Proceso 2: 375 archivos asignados
+Proceso 3: 375 archivos asignados
+Proceso 4: 375 archivos asignados
+Proceso 5: 375 archivos asignados
+Proceso 6: 375 archivos asignados
+Proceso 7: 375 archivos asignados
+Proceso 0: 375 archivos asignados
+
+===== RESULTADOS MPI v1 =====
+
+Procesos utilizados: 8
+Archivos procesados: 3000
+Total de tokens leídos: 44951458
+Total de ocurrencias encontradas: 3631778
+
+Tiempos por proceso:
+Proceso 0: 375 archivos | 3.900324 s
+Proceso 1: 375 archivos | 3.179060 s
+Proceso 2: 375 archivos | 3.892752 s
+Proceso 3: 375 archivos | 3.483054 s
+Proceso 4: 375 archivos | 3.681998 s
+Proceso 5: 375 archivos | 3.735287 s
+Proceso 6: 375 archivos | 3.460309 s
+Proceso 7: 375 archivos | 3.715665 s
+
+Top 10 palabras:
+  a: 785774
+  para: 392156
+  sus: 228913
+  otros: 105530
+  ante: 99832
+  unos: 88794
+  otra: 83901
+  vosotros: 61617
+  mios: 58420
+  tuya: 56635

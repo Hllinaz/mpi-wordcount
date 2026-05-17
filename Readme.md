@@ -1,44 +1,83 @@
-1. Title and Team Information
+# Word Lab
 
-2. Problem Description
+This repository contains a Python script that generates text files with random Spanish words. The generated files can be used for various purposes, such as testing, data analysis, or language learning.
 
-3. Environment and Execution Instructions
+## Usage
+To generate the text files, run the `generator.py` script. 
 
-4. Experimental plan
-    a. Sequential Baseline (what it does and how)
+```bash
+python generator.py
+```
 
-    b. MPI version 1 (what it does and how)
+To run with docker
 
-    c. The test procedure
+```bash
+docker run --rm -v "$(pwd)":/app augustosalazar/slim-mpi:2 python /app/generator.py
+```
 
-5. Experimental plan execution
-    a. Sequential baseline timing
+or
 
-    b. MPI version 1 timing results
+```bash
+docker run --rm -v "%cd%\target:/app" augustosalazar/slim-mpi:2 python /app/generator.py
+```
 
-    c. Load imbalance evidence
 
-    d. Implementation of MPI Version 2 correcting the imbalance with its timing results
-    (total execution time, speedup, efficiency, load balance)
+The script will create a specified number of text files in the `dataset` directory, each containing a random selection of Spanish words. The words are sourced from the `spanish_words.info` file, which should be placed in the same directory as the script.
 
-6. Analysis
+On baseline_secuencial.py you can find a sequential implementation that goes through the consulta.txt file and seraches each of its words on the rest of the files to find the top 10 most common words
 
-    a. Did the first MPI implementation improve execution time compared to the
-    sequential baseline?
 
-    b. Was the observed speedup linear?
+```bash
+python baseline_secuencial.py
+```
 
-    c. Is there evidence of load imbalance? How was it observed?
+To run with docker
 
-    d. Did the second implementation reduce load imbalance?
+```bash
+docker run --rm -v "$(pwd)":/app augustosalazar/slim-mpi:2 python /app/baseline_secuencial.py
+```
 
-    e. Did the improved distribution strategy produce a real performance
-    improvement?
-    
-    f. What limitations affected your experiment?
+or
 
-7.  Conclusions
-State whether the parallel implementations improved execution time compared to
-the sequential baseline, the most important problem observed in the first parallel
-version, if the second version helped and how ending with a judgment based on
-evidence
+```bash
+docker run --rm -v "%cd%\target:/app" augustosalazar/slim-mpi:2 python /app/baseline_secuencial.py
+```
+
+A sample of the output:
+
+```bash
+~/development/MPI/word_lab python3 baseline_secuencial.py
+Tiempo de ejecución: 5.271514 segundos
+
+Dataset procesado: /Users/augustosalazar/development/MPI/word_lab/dataset
+Archivo de consulta: consulta.txt
+Archivos procesados: 3000
+Total de tokens leídos: 44951458
+Total de ocurrencias encontradas: 3631778
+Resultados guardados en: /Users/augustosalazar/development/MPI/word_lab/dataset/baseline_results.csv
+
+Top 10 palabras de consulta en el corpus:
+  a: 785774
+  para: 392156
+  sus: 228913
+  otros: 105530
+  ante: 99832
+  unos: 88794
+  otra: 83901
+  vosotros: 61617
+  mios: 58420
+  tuya: 56635
+```
+
+A batch script is provided to run all the experiments automatically:
+
+```bash
+docker run --rm -v "$(pwd)":/app augustosalazar/slim-mpi:2 sh /app/run_all.sh
+```
+
+or 
+
+```bash
+docker run --rm -v "%cd%\target:/app" augustosalazar/slim-mpi:2 sh /app/run_all.sh
+```
+

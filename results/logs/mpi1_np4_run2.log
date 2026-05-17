@@ -1,0 +1,29 @@
+Proceso 1: 750 archivos asignados
+Proceso 2: 750 archivos asignados
+Proceso 3: 750 archivos asignados
+Proceso 0: 750 archivos asignados
+
+===== RESULTADOS MPI v1 =====
+
+Procesos utilizados: 4
+Archivos procesados: 3000
+Total de tokens leídos: 44951458
+Total de ocurrencias encontradas: 3631778
+
+Tiempos por proceso:
+Proceso 0: 750 archivos | 5.956239 s
+Proceso 1: 750 archivos | 5.500060 s
+Proceso 2: 750 archivos | 6.405696 s
+Proceso 3: 750 archivos | 5.662308 s
+
+Top 10 palabras:
+  a: 785774
+  para: 392156
+  sus: 228913
+  otros: 105530
+  ante: 99832
+  unos: 88794
+  otra: 83901
+  vosotros: 61617
+  mios: 58420
+  tuya: 56635
