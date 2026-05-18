@@ -199,7 +199,7 @@ unos: 88794, otra: 83901, vosotros: 61617, mios: 58420, tuya: 56635`.
 Total wall-clock time `EXECUTION_TIME` per run (rows from
 `results/times_summary.csv`):
 
-| Processes `p` | Run 1 (s) | Run 2 (s) | Run 3 (s) | **T_p (s)** | **Speedup S_p** | **Efficiency E_p** | CoV |
+| Processes `p` | Run 1 $(s)$ | Run 2 $(s)$ | Run 3 $(s)$ | **$T_p (s)$** | **Speedup $S_p$** | **Efficiency $E_p$** | CoV |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 1 (baseline) | 19.429 | — | — | 19.429 | 1.00 | 1.00 | — |
 | 2 | 8.304 | 7.904 | 7.805 | **8.004** | **2.43** | **1.21** | 2.7 % |
@@ -217,7 +217,7 @@ discussed in -6.b.
 Per-run imbalance computed from the local rank times in
 `results/logs/mpi1_*.log`:
 
-| `p` | Run | t_min (s) | t_max (s) | **Imbalance (t_max − t_min)/t_max** |
+| `p` | Run | $t_{min} (s)$ | $t_{max} (s)$ | **Imbalance $(t_{max} − t_{min})/t_{max}$** |
 | --- | --- | --- | --- | --- |
 | 2 | 1 | 8.292 | 8.304 | 0.15 % |
 | 2 | 2 | 7.810 | 7.904 | 1.19 % |
@@ -273,7 +273,7 @@ Design choices and what they buy:
 **Timing results.** Total wall-clock time per run (from
 `results/times_summary.csv`):
 
-| Processes `p` | Run 1 (s) | Run 2 (s) | Run 3 (s) | **T_p (s)** | **Speedup S_p** | **Efficiency E_p** | CoV |
+| Processes `p` | Run 1 $(s)$ | Run 2 $(s)$ | Run 3 $(s)$ | **$T_p (s)$** | **Speedup $S_p$** | **Efficiency $E_p$** | CoV |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 2 | 11.274 | 11.283 | 10.963 | **11.173** | **1.74** | 0.87 | 1.3 % |
 | 4 | 7.471 | 7.426 | 7.383 | **7.427**  | **2.62** | 0.65 | 0.6 % |
@@ -281,7 +281,7 @@ Design choices and what they buy:
 
 **Load balance** (worst run per configuration, from `mpi2_*.log`):
 
-| `p` | t_min (s) | t_max (s) | **Imbalance** |
+| `p` | t_min $(s)$ | t_max $(s)$ | **Imbalance** |
 | --- | --- | --- | --- |
 | 2 | 11.283 | 11.294 | 0.10 % |
 | 4 |  7.290 |  7.436 | 1.96 % |
@@ -289,7 +289,7 @@ Design choices and what they buy:
 
 **Side-by-side comparison v1 vs v2:**
 
-| `p` | T_p v1 (s) | T_p v2 (s) | ΔT (v2 − v1) | Imbalance v1 (worst) | Imbalance v2 (worst) | Speedup v1 | Speedup v2 |
+| `p` | T_p v1 $(s)$ | T_p v2 $(s)$ | $\Delta T (v2 − v1)$ | Imbalance v1 (worst) | Imbalance v2 (worst) | Speedup v1 | Speedup v2 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 2 | 8.004 | 11.173 | **+3.17 s (+40 %)** | 1.19 % | 0.10 % | 2.43 | 1.74 |
 | 4 | 4.562 | 7.427  | **+2.87 s (+63 %)** | 5.73 % | 2.06 % | 4.26 | 2.62 |
@@ -332,7 +332,7 @@ measurement artifact.
 **Answer: no.** At `p ∈ {2, 4}` it is *super-linear*; at `p = 8` it is
 *sub-linear*.
 
-| `p` | Ideal S_p | Measured S_p | Efficiency E_p |
+| `p` | Ideal $S_p$ | Measured $S_p$ | Efficiency $E_p$ |
 | --- | --- | --- | --- |
 | 2 | 2.0 | 2.43 | **1.21** |
 | 4 | 4.0 | 4.26 | **1.06** |
