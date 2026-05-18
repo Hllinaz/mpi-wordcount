@@ -28,8 +28,10 @@ master-worker scheme using point-to-point communication**.
 * **University:** Universidad del Norte — División de Ingenierías
 * **Lab:** Parallel Word Counting in a Text Corpus with MPI
 * **Team Members:**
-  * Esteban Salas
-  * Humberto Llinas
+  * Esteban Salas Herrera
+  * Humberto Llinas Marimon
+  * Maria Arias Medina
+  * Sebastian Jimenez Perez
 
 ---
 
