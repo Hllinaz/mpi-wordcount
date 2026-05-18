@@ -83,6 +83,8 @@ local_files = comm.scatter(chunks, root=0)
 
 print(f"Proceso {rank}: {len(local_files)} archivos asignados")
 
+comm.Barrier()
+t_total_start = MPI.Wtime()
 t0_local = time.perf_counter()
 
 freq_local, total_tokens_local = contar_palabras_archivos(
@@ -103,6 +105,8 @@ all_times = comm.gather(local_time, root=0)
 
 all_nfiles = comm.gather(len(local_files), root=0)
 
+t_total = MPI.Wtime() - t_total_start
+
 if rank == 0:
 
     freq_global = Counter()
@@ -116,11 +120,16 @@ if rank == 0:
 
     top_words = freq_global.most_common(top_n)
 
+    t_max = max(all_times)
+    t_min = min(all_times)
+    t_avg = sum(all_times) / size
+    imbalance = (t_max - t_min) / t_max if t_max > 0 else 0.0
+
     print("\n===== RESULTADOS MPI v1 =====\n")
 
     print(f"Procesos utilizados: {size}")
     print(f"Archivos procesados: {sum(all_nfiles)}")
-    print(f"Total de tokens leídos: {total_tokens}")
+    print(f"Total de tokens leidos: {total_tokens}")
     print(f"Total de ocurrencias encontradas: {total_ocurrencias}")
 
     print("\nTiempos por proceso:")
@@ -132,7 +141,17 @@ if rank == 0:
             f"{all_times[i]:.6f} s"
         )
 
+    print(
+        f"\nLoad balance: t_min={t_min:.6f} s | "
+        f"t_max={t_max:.6f} s | t_avg={t_avg:.6f} s | "
+        f"imbalance={imbalance*100:.2f}%"
+    )
+
+    print(f"\nTiempo total MPI v1: {t_total:.6f} s")
+
     print(f"\nTop {top_n} palabras:")
 
     for palabra, cuenta in top_words:
         print(f"  {palabra}: {cuenta}")
+
+    print(f"\nEXECUTION_TIME={t_total:.6f}")

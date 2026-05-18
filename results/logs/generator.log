@@ -1,5 +1,6 @@
-Vocabulario existente encontrado con 2000 palabras únicas.
-Eliminando directorio existente: /app/dataset
+No existe /app/spanish_words.info. Se generará automáticamente.
+Vocabulario generado: /app/spanish_words.info
+Total de palabras en vocabulario: 2000
 Directorio de salida listo: /app/dataset
 Creado consulta.txt con 200 palabras
 Generados 50/3000 archivos...

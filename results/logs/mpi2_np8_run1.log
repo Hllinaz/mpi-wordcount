@@ -1,0 +1,36 @@
+
+===== RESULTADOS MPI v2 (dynamic master-worker) =====
+
+Procesos utilizados: 8
+Tamano de chunk: 25 archivos
+Archivos procesados: 3000 de 3000
+Total de tokens leidos: 44951458
+Total de ocurrencias encontradas: 3631778
+
+Tiempos por proceso:
+  Proceso 0 (master): 725 archivos | 4.689474 s
+  Proceso 1 (worker): 325 archivos | 4.700311 s
+  Proceso 2 (worker): 325 archivos | 4.700297 s
+  Proceso 3 (worker): 325 archivos | 4.700316 s
+  Proceso 4 (worker): 325 archivos | 4.700200 s
+  Proceso 5 (worker): 325 archivos | 4.700271 s
+  Proceso 6 (worker): 325 archivos | 4.700267 s
+  Proceso 7 (worker): 325 archivos | 4.700258 s
+
+Load balance: t_min=4.689474 s | t_max=4.700316 s | t_avg=4.698924 s | imbalance=0.23%
+
+Tiempo total MPI v2: 4.690267 s
+
+Top 10 palabras:
+  a: 785774
+  para: 392156
+  sus: 228913
+  otros: 105530
+  ante: 99832
+  unos: 88794
+  otra: 83901
+  vosotros: 61617
+  mios: 58420
+  tuya: 56635
+
+EXECUTION_TIME=4.690267

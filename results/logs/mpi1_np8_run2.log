@@ -1,28 +1,32 @@
 Proceso 1: 375 archivos asignados
-Proceso 2: 375 archivos asignados
 Proceso 3: 375 archivos asignados
 Proceso 4: 375 archivos asignados
 Proceso 5: 375 archivos asignados
 Proceso 6: 375 archivos asignados
-Proceso 0: 375 archivos asignados
 Proceso 7: 375 archivos asignados
+Proceso 0: 375 archivos asignados
+Proceso 2: 375 archivos asignados
 
 ===== RESULTADOS MPI v1 =====
 
 Procesos utilizados: 8
 Archivos procesados: 3000
-Total de tokens leídos: 44951458
+Total de tokens leidos: 44951458
 Total de ocurrencias encontradas: 3631778
 
 Tiempos por proceso:
-Proceso 0: 375 archivos | 3.119953 s
-Proceso 1: 375 archivos | 3.274926 s
-Proceso 2: 375 archivos | 3.664041 s
-Proceso 3: 375 archivos | 3.166309 s
-Proceso 4: 375 archivos | 3.613327 s
-Proceso 5: 375 archivos | 3.628625 s
-Proceso 6: 375 archivos | 3.296790 s
-Proceso 7: 375 archivos | 4.622784 s
+Proceso 0: 375 archivos | 2.594973 s
+Proceso 1: 375 archivos | 2.573872 s
+Proceso 2: 375 archivos | 3.002718 s
+Proceso 3: 375 archivos | 2.736617 s
+Proceso 4: 375 archivos | 2.907877 s
+Proceso 5: 375 archivos | 2.903600 s
+Proceso 6: 375 archivos | 2.655873 s
+Proceso 7: 375 archivos | 2.905705 s
+
+Load balance: t_min=2.573872 s | t_max=3.002718 s | t_avg=2.785154 s | imbalance=14.28%
+
+Tiempo total MPI v1: 3.003153 s
 
 Top 10 palabras:
   a: 785774
@@ -35,3 +39,5 @@ Top 10 palabras:
   vosotros: 61617
   mios: 58420
   tuya: 56635
+
+EXECUTION_TIME=3.003153

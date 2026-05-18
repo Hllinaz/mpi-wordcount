@@ -7,14 +7,18 @@ Proceso 0: 750 archivos asignados
 
 Procesos utilizados: 4
 Archivos procesados: 3000
-Total de tokens leídos: 44951458
+Total de tokens leidos: 44951458
 Total de ocurrencias encontradas: 3631778
 
 Tiempos por proceso:
-Proceso 0: 750 archivos | 5.956239 s
-Proceso 1: 750 archivos | 5.500060 s
-Proceso 2: 750 archivos | 6.405696 s
-Proceso 3: 750 archivos | 5.662308 s
+Proceso 0: 750 archivos | 4.372036 s
+Proceso 1: 750 archivos | 4.326558 s
+Proceso 2: 750 archivos | 4.498784 s
+Proceso 3: 750 archivos | 4.478164 s
+
+Load balance: t_min=4.326558 s | t_max=4.498784 s | t_avg=4.418885 s | imbalance=3.83%
+
+Tiempo total MPI v1: 4.499143 s
 
 Top 10 palabras:
   a: 785774
@@ -27,3 +31,5 @@ Top 10 palabras:
   vosotros: 61617
   mios: 58420
   tuya: 56635
+
+EXECUTION_TIME=4.499143

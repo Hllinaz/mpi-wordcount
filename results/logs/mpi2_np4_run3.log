@@ -8,14 +8,14 @@ Total de tokens leidos: 44951458
 Total de ocurrencias encontradas: 3631778
 
 Tiempos por proceso:
-  Proceso 0 (master): 1300 archivos | 7.332863 s
-  Proceso 1 (worker): 575 archivos | 7.440791 s
-  Proceso 2 (worker): 575 archivos | 7.480626 s
-  Proceso 3 (worker): 550 archivos | 7.342972 s
+  Proceso 0 (master): 1300 archivos | 7.240874 s
+  Proceso 1 (worker): 575 archivos | 7.353536 s
+  Proceso 2 (worker): 575 archivos | 7.393465 s
+  Proceso 3 (worker): 550 archivos | 7.251657 s
 
-Load balance: t_min=7.332863 s | t_max=7.480626 s | t_avg=7.399313 s | imbalance=1.98%
+Load balance: t_min=7.240874 s | t_max=7.393465 s | t_avg=7.309883 s | imbalance=2.06%
 
-Tiempo total MPI v2: 7.470911 s
+Tiempo total MPI v2: 7.382994 s
 
 Top 10 palabras:
   a: 785774
@@ -29,4 +29,4 @@ Top 10 palabras:
   mios: 58420
   tuya: 56635
 
-EXECUTION_TIME=7.470911
+EXECUTION_TIME=7.382994

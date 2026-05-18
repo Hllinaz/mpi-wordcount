@@ -5,12 +5,16 @@ Proceso 1: 1500 archivos asignados
 
 Procesos utilizados: 2
 Archivos procesados: 3000
-Total de tokens leídos: 44951458
+Total de tokens leidos: 44951458
 Total de ocurrencias encontradas: 3631778
 
 Tiempos por proceso:
-Proceso 0: 1500 archivos | 18.563380 s
-Proceso 1: 1500 archivos | 12.921828 s
+Proceso 0: 1500 archivos | 7.804422 s
+Proceso 1: 1500 archivos | 7.786264 s
+
+Load balance: t_min=7.786264 s | t_max=7.804422 s | t_avg=7.795343 s | imbalance=0.23%
+
+Tiempo total MPI v1: 7.804664 s
 
 Top 10 palabras:
   a: 785774
@@ -23,3 +27,5 @@ Top 10 palabras:
   vosotros: 61617
   mios: 58420
   tuya: 56635
+
+EXECUTION_TIME=7.804664

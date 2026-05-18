@@ -11,18 +11,22 @@ Proceso 0: 375 archivos asignados
 
 Procesos utilizados: 8
 Archivos procesados: 3000
-Total de tokens leídos: 44951458
+Total de tokens leidos: 44951458
 Total de ocurrencias encontradas: 3631778
 
 Tiempos por proceso:
-Proceso 0: 375 archivos | 3.900324 s
-Proceso 1: 375 archivos | 3.179060 s
-Proceso 2: 375 archivos | 3.892752 s
-Proceso 3: 375 archivos | 3.483054 s
-Proceso 4: 375 archivos | 3.681998 s
-Proceso 5: 375 archivos | 3.735287 s
-Proceso 6: 375 archivos | 3.460309 s
-Proceso 7: 375 archivos | 3.715665 s
+Proceso 0: 375 archivos | 2.620845 s
+Proceso 1: 375 archivos | 2.609158 s
+Proceso 2: 375 archivos | 2.998004 s
+Proceso 3: 375 archivos | 2.750945 s
+Proceso 4: 375 archivos | 2.912535 s
+Proceso 5: 375 archivos | 2.935231 s
+Proceso 6: 375 archivos | 2.710791 s
+Proceso 7: 375 archivos | 2.923444 s
+
+Load balance: t_min=2.609158 s | t_max=2.998004 s | t_avg=2.807619 s | imbalance=12.97%
+
+Tiempo total MPI v1: 2.998457 s
 
 Top 10 palabras:
   a: 785774
@@ -35,3 +39,5 @@ Top 10 palabras:
   vosotros: 61617
   mios: 58420
   tuya: 56635
+
+EXECUTION_TIME=2.998457
